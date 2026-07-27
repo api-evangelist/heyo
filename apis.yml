@@ -1,7 +1,24 @@
 aid: heyo
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heyo.png
 name: Heyo
-description: Heyo is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Heyo is a social marketing platform for building and running online promotions
+  such as sweepstakes, contests, giveaways, quizzes, and coupons. Businesses use Heyo's
+  drag-and-drop campaign builder and landing pages to create interactive campaign apps
+  that publish to the web, mobile, and social networks including Facebook, Instagram, and
+  Twitter. It is used to grow email marketing lists, generate sales leads, acquire new
+  customers, reward existing customers, and increase social followers, with templated
+  promotion apps and a free trial. Heyo is a portfolio company of 500 Global.
 url: https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +28,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Marketing
+- Social Media
+- Promotions
+- Contests
+- Sweepstakes
+- Giveaways
+- Lead Generation
+- Email Marketing
+- Campaigns
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +47,20 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/heyo-domain-security.yml
 - type: Website
   url: https://heyo.com
+- type: Pricing
+  url: https://heyo.com/pricing/
+- type: TermsOfService
+  url: https://heyo.com/terms/
+- type: PrivacyPolicy
+  url: https://heyo.com/privacy/
+- type: Login
+  url: https://heyo.com/login
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
