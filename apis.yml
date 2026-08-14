@@ -1,15 +1,20 @@
 aid: heyo
 accessModel:
-  pricing: unknown
-  onboarding: unknown
-  trial: false
-  try_now: false
-  public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  pricing: paid
+  onboarding: self-service
+  trial: true
+  try_now: true
+  public: true
+  label: Self-service SaaS, no API
+  confidence: high
+  source:
+  - https://heyo.com/pricing/
+  - https://platform.heyo.com/register
+  generated: '2026-08-13'
+  method: searched
+  note: >-
+    Product access is self-serve (7-day free trial, no credit card, then $45-$249/mo).
+    There is no API access model of any kind — Heyo publishes no public API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heyo.png
 name: Heyo
 description: Heyo is a social marketing platform for building and running online promotions
@@ -18,7 +23,10 @@ description: Heyo is a social marketing platform for building and running online
   that publish to the web, mobile, and social networks including Facebook, Instagram, and
   Twitter. It is used to grow email marketing lists, generate sales leads, acquire new
   customers, reward existing customers, and increase social followers, with templated
-  promotion apps and a free trial. Heyo is a portfolio company of 500 Global.
+  promotion apps and a free trial. Heyo is a portfolio company of 500 Global and was
+  acquired by Votigo, Inc. in January 2016, continuing to operate as a stand-alone
+  self-serve brand. Heyo publishes no public API, SDK or developer portal; the product
+  is used entirely through the web dashboard at platform.heyo.com.
 url: https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -26,9 +34,21 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-acquired-by:
+  company: Votigo, Inc.
+  website: https://www.votigo.com
+  date: '2016-01-04'
+  evidence: platform.heyo.com footer reads "2010 - 2026 All Rights Reserved, a Votigo Company"
+  note: >-
+    OWNERSHIP BOUNDARY — Votigo markets an enterprise "Developer API" at
+    www.votigo.com/technology/developer-api with a base of api.votigo.com. That contract
+    belongs to VOTIGO: the page describes the Votigo platform, never mentions Heyo, and
+    api.votigo.com is not reachable anonymously (connection timeout). It is deliberately
+    NOT catalogued against Heyo. Heyo operates as a stand-alone brand with no API surface
+    of its own on any heyo.com host.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Marketing
@@ -58,9 +78,39 @@ common:
 - type: PrivacyPolicy
   url: https://heyo.com/privacy/
 - type: Login
-  url: https://heyo.com/login
+  url: https://platform.heyo.com/login
+- type: SignUp
+  url: https://platform.heyo.com/register
+- type: Support
+  url: https://support.heyo.com/
+- type: Blog
+  url: https://blog.heyo.com/
+- type: Plans
+  url: plans/heyo-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/heyo-rate-limits.yml
+- type: LLMsTxt
+  url: llms/heyo-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Heyo ships only an end-user campaign builder — the words "Developer API" appear once
+    on the heyo.com homepage as static headline copy with no link behind them, while
+    /api, /developer, /developers, /docs and /api-docs all 404 and api.heyo.com,
+    developer.heyo.com and docs.heyo.com do not resolve in DNS.
+  evidence:
+  - url: https://heyo.com/developer
+    status: 404
+  - url: https://heyo.com/api-docs
+    status: 404
+  - url: https://heyo.com/.well-known/api-catalog
+    status: 404
+  - url: https://heyo.com/pricing/
+    status: 200
+  checked: '2026-08-13'
