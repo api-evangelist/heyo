@@ -1,0 +1,44 @@
+# Heyo
+
+> Heyo is a social marketing platform for building and running online promotions — sweepstakes, contests, giveaways, quizzes and coupons. Businesses use Heyo's drag-and-drop campaign builder and landing pages to create interactive campaign apps that publish to the web, mobile and social networks. Heyo is operated as a Votigo company (per the platform.heyo.com footer) and is a portfolio company of 500 Global.
+
+## Status for agents
+
+Heyo publishes **no public API**. There is no OpenAPI, Swagger, GraphQL, AsyncAPI or MCP surface on any Heyo host, and no developer portal, API reference or API key signup. The phrase "Developer API" appears once on the heyo.com homepage as static marketing copy in a product-tier headline; it is not a link and resolves to no documentation. `/api`, `/developer`, `/developers`, `/docs` and `/api-docs` all return 404 on heyo.com, and `api.heyo.com`, `developer.heyo.com` and `docs.heyo.com` do not resolve in DNS. Every `/.well-known/` discovery path returns 404 on every Heyo host. An agent cannot integrate with Heyo programmatically; the product is used through its web UI at platform.heyo.com.
+
+The enterprise Developer API marketed by Votigo (api.votigo.com) is a **Votigo** product, documented on votigo.com, which does not mention Heyo. It is deliberately not catalogued here — see the ownership note in apis.yml.
+
+## Product
+
+- [Heyo](https://heyo.com/): Campaign builder for social promotions, contests and sweepstakes
+- [Products](https://heyo.com/products/): Drag-and-drop builder, templates, widgets, mobile optimizer
+- [Sweepstakes](https://heyo.com/sweepstakes/): Sweepstakes campaign template
+- [Photo Contest](https://heyo.com/photocontest/): Photo contest campaign template
+- [Video Contest](https://heyo.com/videocontest/): Video contest campaign template
+- [Instagram Sweeps](https://heyo.com/instagram-sweeps/): Instagram hashtag sweepstakes
+- [Twitter Sweeps](https://heyo.com/twitter-sweeps/): Twitter hashtag sweepstakes
+- [Viral Sweeps](https://heyo.com/viralsweeps/): Referral-driven sweepstakes
+- [Multi Format Contest](https://heyo.com/multiformat/): Combined-format contest
+- [Why Us](https://heyo.com/why-us/): Positioning and differentiators
+
+## Commercial
+
+- [Pricing](https://heyo.com/pricing/): Basic $45/mo ($25/mo annual), Standard $99/mo ($84/mo annual), Premium $249/mo ($199/mo annual), plus quoted one-time custom campaigns
+- [Sign up](https://platform.heyo.com/register): 7-day free trial, no credit card required
+- [Login](https://platform.heyo.com/login): Customer dashboard
+- [Terms of Service](https://heyo.com/terms/)
+- [EULA](https://heyo.com/eula/)
+- [Privacy Policy](https://heyo.com/privacy/)
+
+## Support and content
+
+- [Support Portal](https://support.heyo.com/): Help desk, tutorials, FAQ; support@heyo.com
+- [Blog](https://blog.heyo.com/): Social media marketing blog (most recent post observed: June 2021)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/apis.yml): APIs.json profile for Heyo
+- [plans/heyo-plans-pricing.yml](https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/plans/heyo-plans-pricing.yml): Published plan and pricing detail
+- [rate-limits/heyo-rate-limits.yml](https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/rate-limits/heyo-rate-limits.yml): Recorded absence of published API rate limits
+- [well-known/heyo-well-known.yml](https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/well-known/heyo-well-known.yml): /.well-known/ probe results (all 404)
+- [security/heyo-domain-security.yml](https://raw.githubusercontent.com/api-evangelist/heyo/refs/heads/main/security/heyo-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture

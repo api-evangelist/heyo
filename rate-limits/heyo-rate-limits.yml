@@ -1,0 +1,28 @@
+generated: '2026-08-13'
+method: searched
+source: https://heyo.com/pricing/
+limit_count: 0
+note: >-
+  Heyo publishes no API rate limits, because Heyo publishes no public API. The
+  developer-facing surface referenced in Heyo marketing copy ("Custom and
+  Full-service Solutions -- Enterprise DIY Campaign Builder -- Developer API" on
+  the heyo.com homepage) is not a link and resolves to no documentation on any
+  Heyo host: /api, /developer, /developers, /docs and /api-docs all return 404,
+  and api.heyo.com / developer.heyo.com / docs.heyo.com do not resolve in DNS.
+  The only published usage ceilings are PLAN QUOTAS on the campaign-builder
+  product (leads per month, page views per month, Facebook fan count, campaign
+  and brand-page counts), which are captured in plans/heyo-plans-pricing.yml.
+  They are billing quotas enforced on the product, not request-rate limits, and
+  Heyo documents no rate-limit response headers and no exhaustion status code.
+limits: []
+headers: []
+x-evidence:
+  - url: https://heyo.com/pricing/
+    status: 200
+  - url: https://heyo.com/api
+    status: 404
+  - url: https://heyo.com/developer
+    status: 404
+  - url: https://heyo.com/api-docs
+    status: 404
+checked: '2026-08-13'

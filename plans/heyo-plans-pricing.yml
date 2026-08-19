@@ -1,0 +1,124 @@
+generated: '2026-08-13'
+method: searched
+source: https://heyo.com/pricing/
+note: >-
+  Heyo publishes a full public pricing page with three self-serve SaaS tiers plus a
+  quoted one-time custom-campaign engagement. These are PLATFORM plans for the
+  campaign builder — Heyo publishes no API plan, no API key tier and no API
+  pricing of any kind. The per-plan quotas below (leads/month, page views/month,
+  Facebook fan count, brand pages) are product usage limits, not API rate limits;
+  see rate-limits/heyo-rate-limits.yml.
+currency: USD
+billing_periods:
+  - monthly
+  - annual
+trial:
+  available: true
+  length_days: 7
+  credit_card_required: false
+  source: https://heyo.com/pricing/
+plan_count: 4
+plans:
+  - name: Basic
+    positioning: Great for Startups
+    price_monthly: 45
+    price_annual_per_month: 25
+    currency: USD
+    billing: monthly-or-annual
+    included:
+      campaigns_monthly: 1
+      campaigns_annual: 3
+      leads_per_month_monthly: 5000
+      leads_per_month_annual: unlimited
+      page_views_per_month_monthly: 10000
+      page_views_per_month_annual: 20000
+      facebook_fan_count_monthly: 20000
+      facebook_fan_count_annual: 50000
+      facebook_brand_pages_monthly: 1
+      facebook_brand_pages_annual: 3
+    features:
+      - Drag and drop design
+      - Turnkey contest apps
+      - Multi-language support
+      - Email support
+      - Email marketing integrations
+      - "#Hashtag promotions (annual)"
+      - Multi Format Contest (annual)
+    note: Minimum 2k fans/likes per Facebook brand page.
+  - name: Standard
+    positioning: Perfect for Growing Businesses
+    price_monthly: 99
+    price_annual_per_month: 84
+    currency: USD
+    billing: monthly-or-annual
+    included:
+      campaigns_monthly: 10
+      campaigns_annual: 15
+      leads_per_month_monthly: 10000
+      leads_per_month_annual: unlimited
+      page_views_per_month_monthly: 50000
+      page_views_per_month_annual: 100000
+      facebook_fan_count_monthly: 100000
+      facebook_fan_count_annual: 250000
+      facebook_brand_pages_monthly: 10
+      facebook_brand_pages_annual: 15
+    features:
+      - Full CSS control
+      - Extended campaign analytics
+      - Entry categories for contests
+      - Sweep winner selection tool
+      - Coupons, signup forms, social content hub, instant win
+      - Download assets (annual)
+      - 3rd party email integrations
+  - name: Premium
+    positioning: Ideal for Marketing Agencies
+    price_monthly: 249
+    price_annual_per_month: 199
+    currency: USD
+    billing: monthly-or-annual
+    included:
+      campaigns_monthly: unlimited
+      campaigns_annual: unlimited
+      leads_per_month_monthly: 50000
+      leads_per_month_annual: unlimited
+      page_views_per_month_monthly: 250000
+      page_views_per_month_annual: 500000
+      facebook_fan_count_monthly: 1000000
+      facebook_fan_count_annual: unlimited
+      facebook_brand_pages_monthly: 25
+      facebook_brand_pages_annual: 50
+    features:
+      - GEO IP settings
+      - White-label
+      - Voting app, quizzes, head to head
+      - Full CSS control
+      - Extended campaign analytics
+      - Sweep winner selection tool
+  - name: One-Time Campaigns
+    positioning: Custom / full-service work
+    price: quoted
+    billing: one-time-fee
+    contact: https://heyo.com/pricing/
+    features:
+      - Graphic design
+      - Development
+      - Official rules
+      - Winner administration
+      - UGC moderation
+      - Fulfillment
+      - White-label
+    note: Priced by quote via Contact Us; no published rate card.
+payment_methods:
+  - Visa
+  - Mastercard
+  - American Express
+  - Discover
+contract_terms:
+  contracts: none
+  change_plan: upgrade, downgrade or cancel at any time
+  cancellation: email support@heyo.com
+  source: https://heyo.com/pricing/
+x-evidence:
+  - url: https://heyo.com/pricing/
+    status: 200
+    fetched: '2026-08-13'
