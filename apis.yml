@@ -46,7 +46,7 @@ x-acquired-by:
     api.votigo.com is not reachable anonymously (connection timeout). It is deliberately
     NOT catalogued against Heyo. Heyo operates as a stand-alone brand with no API surface
     of its own on any heyo.com host.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-08-13'
 tags:
